@@ -77,7 +77,7 @@ function combate() {
     spanVidasJugador.innerHTML = vidasJugador;
   }
 
-  revisarVidas;
+  revisarVidas();
 }
 
 function revisarVidas() {
@@ -98,10 +98,10 @@ function crearMensajeFinal(resultadoFinal) {
 }
 
 function seleccionarMascotaJugador() {
-  let InputHipodoge = document.getElementById("hipodoge");
-  let InputCapipepo = document.getElementById("capipepo");
-  let InputRatigueya = document.getElementById("ratigueya");
-  let spanMascotaJugador = document.getElementById("nombre-mascota-jugador");
+  const InputHipodoge = document.getElementById("hipodoge");
+  const InputCapipepo = document.getElementById("capipepo");
+  const InputRatigueya = document.getElementById("ratigueya");
+  const spanMascotaJugador = document.getElementById("nombre-mascota-jugador");
 
   if (InputHipodoge.checked) {
     spanMascotaJugador.innerHTML = "Hipodoge";
