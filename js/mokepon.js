@@ -2,6 +2,7 @@ let ataqueJugador;
 let ataqueEnemigo;
 let vidasJugador = 3;
 let vidasEnemigo = 3;
+
 function iniciarJuego() {
   let botonMascotaJugador = document.getElementById("boton-mascota");
   botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
@@ -12,6 +13,14 @@ function iniciarJuego() {
   botonAgua.addEventListener("click", ataqueAgua);
   let botonTierra = document.getElementById("boton-tierra");
   botonTierra.addEventListener("click", ataqueTierra);
+  
+  let botonReiniciar = document.getElementById ("boton-reiniciar")
+  botonReiniciar.addEventListener("click", reiniciarJuego)
+  botonReiniciar.style.display ="none"
+
+  let sectionSeleccionarAtaque = document.getElementById("seleccion-ataque")
+  sectionSeleccionarAtaque.style.display = "none"
+
 }
 function ataqueFuego() {
   ataqueJugador = "FUEGO";
@@ -91,13 +100,29 @@ function revisarVidas() {
 }
 
 function crearMensajeFinal(resultadoFinal) {
+  let botonReiniciar = document.getElementById ("boton-reiniciar")
+  botonReiniciar.style.display ="block"
+
   let sectionMensajes = document.getElementById("mensajes");
   let parrafo = document.createElement("p");
   parrafo.innerHTML = resultadoFinal;
   sectionMensajes.appendChild(parrafo);
+
+  let botonFuego = document.getElementById("boton-fuego");
+  botonFuego.disabled = true
+  let botonAgua = document.getElementById("boton-agua");
+  botonAgua.disabled = true
+  let botonTierra = document.getElementById("boton-tierra");
+  botonTierra.disabled = true
 }
 
 function seleccionarMascotaJugador() {
+  let sectionSeleccionarMascota = document.getElementById ("seleccion-mascota")
+  sectionSeleccionarMascota.style.display = "none"
+
+  let sectionSeleccionarAtaque = document.getElementById("seleccion-ataque")
+  sectionSeleccionarAtaque.style.display = "block"
+
   const InputHipodoge = document.getElementById("hipodoge");
   const InputCapipepo = document.getElementById("capipepo");
   const InputRatigueya = document.getElementById("ratigueya");
@@ -114,6 +139,10 @@ function seleccionarMascotaJugador() {
   }
 
   seleccionarMascotaEnemigo();
+}
+
+function reiniciarJuego(){
+  location.reload()
 }
 
 function aleatorio(min, max) {
