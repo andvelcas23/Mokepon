@@ -117,8 +117,6 @@ function crearMensajeFinal(resultadoFinal) {
 }
 
 function seleccionarMascotaJugador() {
-  let sectionSeleccionarMascota = document.getElementById ("seleccion-mascota")
-  sectionSeleccionarMascota.style.display = "none"
 
   let sectionSeleccionarAtaque = document.getElementById("seleccion-ataque")
   sectionSeleccionarAtaque.style.display = "block"
