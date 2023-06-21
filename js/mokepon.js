@@ -23,15 +23,15 @@ function iniciarJuego() {
 
 }
 function ataqueFuego() {
-  ataqueJugador = "FUEGO";
+  ataqueJugador = "FIRE";
   ataqueAleatorioEnemigo();
 }
 function ataqueAgua() {
-  ataqueJugador = "AGUA";
+  ataqueJugador = "WATER";
   ataqueAleatorioEnemigo();
 }
 function ataqueTierra() {
-  ataqueJugador = "TIERRA";
+  ataqueJugador = "EARTH";
   ataqueAleatorioEnemigo();
 }
 
@@ -39,11 +39,11 @@ function ataqueAleatorioEnemigo() {
   let ataqueAleatorio = aleatorio(1, 3);
 
   if (ataqueAleatorio == 1) {
-    ataqueEnemigo = "FUEGO";
+    ataqueEnemigo = "FIRE";
   } else if (ataqueAleatorio == 2) {
-    ataqueEnemigo = "AGUA";
+    ataqueEnemigo = "WATER";
   } else {
-    ataqueEnemigo = "TIERRA";
+    ataqueEnemigo = "EARTH";
   }
 
   combate();
@@ -54,11 +54,11 @@ function crearMensaje(resultadoCombate) {
   let parrafo = document.createElement("p");
 
   parrafo.innerHTML =
-    "tu mascota atacó con " +
+    "Your pet attacked with " +
     ataqueJugador +
-    ", y la mascota del enemigo atacó con " +
+    ", and the enemy's pet attacked with " +
     ataqueEnemigo +
-    " ," +
+    ", " +
     resultadoCombate;
   sectionMensajes.appendChild(parrafo);
 }
@@ -67,21 +67,21 @@ function combate() {
   let spanVidasJugador = document.getElementById("vidas-jugador");
   let spanVidasEnemigo = document.getElementById("vidas-enemigo");
   if (ataqueEnemigo == ataqueJugador) {
-    crearMensaje("¡ES UN EMPATE 😑!");
-  } else if (ataqueJugador == "FUEGO" && ataqueEnemigo == "TIERRA") {
-    crearMensaje("¡GANASTE!🥳");
+    crearMensaje("DRAW 😑!");
+  } else if (ataqueJugador == "FIRE" && ataqueEnemigo == "EARTH") {
+    crearMensaje("YOU WON! 🥳");
     vidasEnemigo--;
     spanVidasEnemigo.innerHTML = vidasEnemigo;
-  } else if (ataqueJugador == "TIERRA" && ataqueEnemigo == "AGUA") {
-    crearMensaje("¡GANASTE!🥳");
+  } else if (ataqueJugador == "EARTH" && ataqueEnemigo == "WATER") {
+    crearMensaje("YOU WON! 🥳");
     vidasEnemigo--;
     spanVidasEnemigo.innerHTML = vidasEnemigo;
-  } else if (ataqueJugador == "AGUA" && ataqueEnemigo == "FUEGO") {
-    crearMensaje("¡GANASTE!🥳");
+  } else if (ataqueJugador == "WATER" && ataqueEnemigo == "FIRE") {
+    crearMensaje("YOU WON! 🥳");
     vidasEnemigo--;
     spanVidasEnemigo.innerHTML = vidasEnemigo;
   } else {
-    crearMensaje("¡PERDISTE!😥");
+    crearMensaje("YOU LOSE! 😥");
     vidasJugador--;
     spanVidasJugador.innerHTML = vidasJugador;
   }
@@ -91,11 +91,11 @@ function combate() {
 
 function revisarVidas() {
   if (vidasEnemigo == 0) {
-    alert("GANASTE LA BATALLA FINAL");
-    crearMensajeFinal("GANASTE LA BATALLA FINAL");
+    alert("YOU WON THE FINAL BATTLE");
+    crearMensajeFinal("YOU WON THE FINAL BATTLE");
   } else if (vidasJugador == 0) {
-    alert("PERDISTE LA BATALLA FINAL :( intentalo de nuevo");
-    crearMensajeFinal("PERDISTE LA BATALLA FINAL :( intentalo de nuevo");
+    alert("YOU LOSE THE FINAL BATTLE :( TRY AGAIN");
+    crearMensajeFinal("YOU LOSE THE FINAL BATTLE :( TRY AGAIN");
   }
 }
 
@@ -135,7 +135,7 @@ function seleccionarMascotaJugador() {
   } else if (InputRatigueya.checked) {
     spanMascotaJugador.innerHTML = "Ratigueya";
   } else {
-    alert("selecciona una mascota");
+    alert("Please select your fightpet");
   }
 
   seleccionarMascotaEnemigo();
