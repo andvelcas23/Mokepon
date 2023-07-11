@@ -1,2 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
+@font-face {
+    font-family: blanka;
+    src: url("../css/fuentes/Blanka-Regular.otf");
+}
+@font-face {
+    font-family: Nexa Bold;
+    src: url("../css/fuentes/Nexa\ Bold.otf");
+}
+@font-face {
+    font-family: Nexa Light;
+    src: url("../css/fuentes/Nexa\ Light.otf");
+}
+body{
+    background-image: linear-gradient(to left, #FFB84C,#F266AB,#A459D1,#2CD3E1);
+}
+.tittle  {
+    text-align: center;
+    margin-top: 30px;
+    font-family: blanka;
+    font-size: 90px;
+    color: rgba(240, 248, 255, 0.596);
+    letter-spacing: 15px;
+}
+.subtittle{
+    color: aliceblue;
+    font-family: blanka;
+    letter-spacing: 4px;
+    word-spacing: 20px;
+}
+#seleccion-mascota {
+    display: flex;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    border:solid;
+    border-color: rgba(255, 255, 255, 0.589);
+    border-width: 2px;
+    background-image:linear-gradient(to left, #F266AB,#A459D1);
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100hv;
+}
+.tarjeta-de-mokepon {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(28, 196, 196, 0.336);
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.589);
+    border-width: 2px;
+    margin: 20px;
+    text-align: center;
+    font-family: Nexa Light;
+    color:aliceblue
+}
+.tarjeta-de-mokepon img {
+    height: 115px;
+}
+input {
+    display: none;
+}
+#boton-mascota {
+    border-radius: 15px;
+    padding: 5px;
+    height: fit-content;
+    width: 150px;
+    background-color: #A459D1;
+    border-style: solid;
+    border-color: rgba(240, 248, 255, 0.342);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: aliceblue;
+}
+#seleccion-ataque{
+    flex-direction: column;
+    align-items: center;
+    font-family: nexa bold;
+    color: aliceblue;
+    text-align: center;
+       
+}
+.attack-button {
+    border-radius: 15px;
+    padding: 5px;
+    height: fit-content;
+    width: 150px;
+    background-color: #A459D1;
+    border-style: solid;
+    border-color: rgba(240, 248, 255, 0.342);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: aliceblue;
+}
+#boton-reiniciar {
+    border-radius: 15px;
+    padding: 5px;
+    height: fit-content;
+    width: 150px;
+    background-color: #9a31d6;
+    border-style: solid;
+    border-color: rgba(240, 248, 255, 0.342);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: aliceblue;
+}
