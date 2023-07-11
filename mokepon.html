@@ -10,40 +10,57 @@
     <h1 id="maintittle" class="tittle">MOKEPON</h1>
     <section id="seleccion-mascota">
       
-      <h2>Choose your fight pet:</h2>
-      <div id="botones-mascota">
-        <label class="tarjeta-de-mokepon" for="hipodoge">Hipodoge</label>
+      <h2 class="subtittle">Choose your fight pet:</h2>
+      <div class="botones-mascota">
+        <label class="tarjeta-de-mokepon" for="hipodoge">
+          Hipodoge
+          <img src="../mokepon/css/imagenes/hipodoge.png" alt="Hipodoge">
+        </label>
         <input type="radio" name="mascota" id="hipodoge" />
 
-        <label class="tarjeta-de-mokepon" for="capipepo">Capipepo</label>
+        <label class="tarjeta-de-mokepon" for="capipepo">
+          Capipepo
+          <img src="../mokepon/css/imagenes/capipepo.png" alt="Capipepo">
+        </label>
         <input type="radio" name="mascota" id="capipepo" />
 
-        <label class="tarjeta-de-mokepon" for="ratigueya">Ratitgueya</label>
+        <label class="tarjeta-de-mokepon" for="ratigueya">
+          Ratitgueya
+          <img src="../mokepon/css/imagenes/ratigueya.png" alt="Ratigueya">
+        </label>
         <input type="radio" name="mascota" id="ratigueya" />
       </div>
       <button id="boton-mascota">Select</button>
     </section>
+
     <section id="seleccion-ataque">
-      <h2>Choose your attack:</h2>
+      <h2 class="subtittle">Choose your attack:</h2>
+      <div>
 
-      <p>
-        Your pet <span id="nombre-mascota-jugador"></span> has
-        <span id="vidas-jugador">3</span> lives
-      </p>
-      <p>
-        The enemy's pet <span id="nombre-mascota-enemigo"></span> has
-        <span id="vidas-enemigo">3</span> lives
-      </p>
+        <button id="boton-fuego" class="attack-button">Fire 🔥</button>
+        <button id="boton-agua" class="attack-button">Water 💦</button>
+        <button id="boton-tierra" class="attack-button">Earth 🪨</button>
+      
+      </div>
+      <div>
 
-      <p>
-        <button id="boton-fuego">Fire 🔥</button>
-        <button id="boton-agua">Water 💦</button>
-        <button id="boton-tierra">Earth 🪨</button>
-      </p>
-    </section>
-    <section id="mensajes"></section>
-    <section id="reiniciar">
-      <button id="boton-reiniciar">restart</button>
+        <section id="mensajes"></section>
+        <section id="reiniciar">
+          <button id="boton-reiniciar">restart</button>
+        </section>
+
+      </div>
+
+      <div>
+        <p>
+          Your pet <span id="nombre-mascota-jugador"></span> has
+          <span id="vidas-jugador">3</span> lives
+        </p>
+        <p>
+          The enemy's pet <span id="nombre-mascota-enemigo"></span> has
+          <span id="vidas-enemigo">3</span> lives
+        </p>
+      </div>
     </section>
   </body>
 </html>

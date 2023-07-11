@@ -119,7 +119,7 @@ function crearMensajeFinal(resultadoFinal) {
 function seleccionarMascotaJugador() {
 
   let sectionSeleccionarAtaque = document.getElementById("seleccion-ataque")
-  sectionSeleccionarAtaque.style.display = "block"
+  sectionSeleccionarAtaque.style.display = "flex"
 
   const InputHipodoge = document.getElementById("hipodoge");
   const InputCapipepo = document.getElementById("capipepo");
